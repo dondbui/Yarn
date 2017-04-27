@@ -279,6 +279,7 @@ var App = function(name, version)
 		self.$searchField.on('input', self.updateSearch);
 		$(".search-title input").click(self.updateSearch);
 		$(".search-body input").click(self.updateSearch);
+		$(".search-image input").click(self.updateSearch);
 		$(".search-tags input").click(self.updateSearch);
 
 		// using the event helper
@@ -653,6 +654,7 @@ var App = function(name, version)
 		var search = self.$searchField.val().toLowerCase();
 		var title = $(".search-title input").is(':checked');
 		var body = $(".search-body input").is(':checked');
+		var image = $(".search-image input").is(':checked');
 		var tags = $(".search-tags input").is(':checked');
 
 		var on = 1;
@@ -667,9 +669,10 @@ var App = function(name, version)
 			{
 				var matchTitle = (title && node.title().toLowerCase().indexOf(search) >= 0);
 				var matchBody = (body && node.body().toLowerCase().indexOf(search) >= 0);
+				var matchImage = (image && image.body().toLowerCase().indexOf(search) >= 0);
 				var matchTags = (tags && node.tags().toLowerCase().indexOf(search) >= 0);
 
-				if (matchTitle || matchBody || matchTags)
+				if (matchTitle || matchBody || matchTags || matchImage)
 				{
 					node.active(true);
 					element.clearQueue();

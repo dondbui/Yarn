@@ -294,6 +294,7 @@ var data =
 				"title": nodes[i].title(), 
 				"tags": nodes[i].tags(), 
 				"body": nodes[i].body(),
+				"image": nodes[i].image(),
 				"position": { "x": nodes[i].x(), "y": nodes[i].y() },
 				"colorID": nodes[i].colorID()
 			});

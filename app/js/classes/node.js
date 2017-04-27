@@ -12,6 +12,7 @@ var Node = function()
 	this.title = ko.observable("Node" + this.index());
 	this.tags = ko.observable("")
 	this.body = ko.observable("Empty Text");
+	this.image = ko.observable("");
 	//this.x = ko.observable(128);
 	//this.y = ko.observable(128);
 	this.active = ko.observable(true);
