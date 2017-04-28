@@ -291,7 +291,8 @@ var data =
 		for (var i = 0; i < nodes.length; i ++)
 		{
 			content.push({
-				"title": nodes[i].title(), 
+				"title": nodes[i].title(),
+				"treeID": nodes[i].treeID(),
 				"tags": nodes[i].tags(), 
 				"body": nodes[i].body(),
 				"image": nodes[i].image(),

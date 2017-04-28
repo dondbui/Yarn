@@ -3,6 +3,7 @@
 	<div class="node" data-bind="nodeBind: true, style: { left: node.x() + 'px', top: node.y() + 'px' }">
 		<div class="title" data-bind="text: node.title"></div>
 		<div class="body" data-bind="html: node.clippedBody"></div>
+		<div class="treeID" data-bind="html: node.treeID"></div>
 		<div class="image" data-bind="html: node.image"></div>
 		<div class="tags" data-bind="html: node.clippedTags"></div>
 		<div class="icon edit" data-bind="click: function() { app.editNode(node); }"></div>

@@ -100,6 +100,7 @@
 						node.colorID() == 6 ? '#97E1E9' :
 						'#eee'}"></div>
 						<div class="body" data-bind="html: node.clippedBody"></div>
+						<div class="treeID" data-bind="text: node.treeID"></div>
 						<div class="image" data-bind="text: node.image"></div>
 						<div class="tags" data-bind="html: node.clippedTags"></div>
 						<div class="icon colorDown" data-bind="click: node.cycleColorDown"></div>
@@ -116,6 +117,7 @@
 
 				<div class="form" data-bind="preventBubble: 'click', preventBubble: 'mousedown'">
 					<input type="text" class="title" data-bind="value: app.editing().title">
+					<input type="text" data-bind="value: app.editing().treeID">
 					<input type="text" data-bind="value: app.editing().image">
 					<input type="text" data-bind="value: app.editing().tags">
 					<div class="editor-container">

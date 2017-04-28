@@ -13,6 +13,7 @@ var Node = function()
 	this.tags = ko.observable("tags")
 	this.body = ko.observable("Empty Text");
 	this.image = ko.observable("Character Image");
+	this.treeID = ko.observable("TreeID");
 	//this.x = ko.observable(128);
 	//this.y = ko.observable(128);
 	this.active = ko.observable(true);
