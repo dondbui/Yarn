@@ -161,6 +161,18 @@ var data =
 						var xy = lines[i].substr(9, lines[i].length-9).split(',');
 						obj.position = { x: Number(xy[0].trim()), y: Number(xy[1].trim()) }
 					}
+					else if (lines[i].indexOf("image:") > -1)
+					{
+						if (obj == null)
+							obj = {}
+						obj.image = Number(lines[i].substr(7, lines[i].length-7).trim());
+					}
+					else if (lines[i].indexOf("treeID:") > -1)
+					{
+						if (obj == null)
+							obj = {}
+						obj.treeID = Number(lines[i].substr(8, lines[i].length-8).trim());
+					}
 					else if (lines[i].indexOf("colorID:") > -1)
 					{
 						if (obj == null)
@@ -256,6 +268,10 @@ var data =
 				node.title(object.title);
 			if (object.body != undefined)
 				node.body(object.body);
+			if (object.image != undefined)
+				node.image(object.image);
+			if (object.treeID != undefined)
+				node.treeID(object.treeID);
 			if (object.tags != undefined)
 				node.tags(object.tags);
 			if (object.position != undefined && object.position.x != undefined)
